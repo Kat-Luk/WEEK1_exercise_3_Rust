@@ -8,6 +8,13 @@ fn main() {
         println!("Current: {}. Increment by: ", integer);
         io::stdin().read_line(&mut input).expect("Error reading input");
         let input: i32 = input.trim().parse().expect("Input is not a valid integer");
-        integer += input;
+        if input == 0 {
+            println!("The given value is 0. Ending the program.");
+            return;
+        } else if input < 0 {
+            println!("The given value is lower than 0.");
+        } else {
+            integer += input;
+        }
     } println!("Enough incrementations.")
 }
