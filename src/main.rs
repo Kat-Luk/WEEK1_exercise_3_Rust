@@ -7,7 +7,7 @@ fn main() {
         let mut input = String::new();
         println!("Current: {}. Increment by: ", integer);
         io::stdin().read_line(&mut input).expect("Error reading input");
-        let input: i32 = input.trim().parse().expect("Input is not a valid integer");
+        let input: i32 = input.trim().parse().expect("Parsing failed. Was the number too long for a 16-bit variable?");
         if input == 0 {
             println!("The given value is 0. Ending the program.");
             return;
